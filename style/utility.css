@@ -18,7 +18,7 @@
   --max-width: 375px;
   width: min(var(--max-width), 100% - var (--px-lg) * 2);
   margin-inline: auto;
-  border: solid violet;
+  /*border: solid violet;*/
 }
 
 .desktop-only {
@@ -34,8 +34,16 @@
   display: flex;
 }
 
+.items-center{
+ align-items: center;
+}
+
 .gap-1 {
   gap: 1rem;
+}
+
+.gap-1\.5{
+  gap: 1.5rem;
 }
 
 .grid{
@@ -43,12 +51,15 @@
 }
 
 @media (width >= 80em) {
+ .container {
   --max-width: 80rem;
+ } 
+
+ .desktop-only{
+  display: initial;
+ }
 }
 
-.desktop-only {
-  display: initial;
-}
 
 .even-columns {
   grid-auto-flow: column;
