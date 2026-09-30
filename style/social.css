@@ -3,16 +3,14 @@ a.social {
   height: 1.5rem;
   display: block;
   
-  /* IMPORTANTE: Mantém o ícone colorido preso dentro do link */
   position: relative; 
   
-  /* Fundo normal (ícone cinza/preto) */
+  
   background-image: var(--bg-img);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
-  /* Essa é a "camada invisível" que vai ficar por cima com o ícone colorido */
   &::after {
     content: "";
     position: absolute;
@@ -23,18 +21,18 @@ a.social {
     background-repeat: no-repeat;
     background-position: center;
     
-    /* Começa invisível */
+    
     opacity: 0; 
-    /* Transição suave de opacidade */
+    
     transition: opacity 0.3s ease; 
   }
 
-  /* Quando passar o mouse, a camada colorida aparece */
+  
   &:hover::after {
     opacity: 1; 
   }
 
-  /* --- DEFINIÇÃO DAS IMAGENS --- */
+  
   
   &[aria-label="tiktok"] {
     --bg-img: url(../assets/icons/tiktok.svg);
